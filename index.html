@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Message box</title>
+    <link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+    <div class="border">
+        <fieldset><legend><img src="assets/img3.jpg" alt=""></legend>
+      <h3>Ask Me a Question ?</h3>
+   <input type="text" class="type" id="text" placeholder="Type Somthing...">
+      <div class="btn">
+        <button class="btn1" onclick="accept()">Accept</button>
+        <button class="btn1" onclick="decline()">Decline</button>
+      </div>
+    </fieldset>
+    </div>
+    <script>
+        function decline(){
+     alert("Question Declined");
+}
+
+let questions = [
+    "What is your name ?",
+    "How old are you ?",
+    "What is your hobby ?",
+    "What is your strength ?",
+    "What makes you happy ?",
+    "Did you do your task yesterday ?",
+    "Which is your native ?",
+    "Which is your favorite programming language ?",
+    "Are you a fullstack developer ?",
+    "Do you like your job ?"
+]
+
+function accept(){
+    let question = document.querySelector("#text").value;
+    question = question.toLowerCase();
+    if(questions.includes(question)) window.alert("Your question accepted.... ");
+    else window.alert("Your question is denied...");
+}
+    </script>
+</body>
+</html>
